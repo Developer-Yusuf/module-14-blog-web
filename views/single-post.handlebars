@@ -1,0 +1,22 @@
+ <div class="post-content" style="background-color:rgb(233, 243, 243); border-radius:15px; padding-bottom: 5px">
+{{> post-info post}}
+</div> 
+
+{{#if loggedIn}}
+<form class="comment-form">
+  <div>
+    <textarea class="ml-5" name="comment-body" placeholder="Type here  ..."></textarea>
+  </div>
+
+  <div>
+    <button class="button is-warning ml-5 mb-5" style="border-radius:10px" type="submit">Add Comment</button>
+  </div>
+  
+</form>
+{{/if}}
+
+{{> comments post.comments}}
+
+{{#if loggedIn}}
+<script src="/javascript/comment.js"></script>
+{{/if}}
